@@ -1,0 +1,138 @@
+<deployment-project plugin="plugin.ezdeploy" plugin-version="1.0">
+  <configuration file="C:\Users\jlea\Documents\Terminus_change_tool\New_script\MaQiT_v1pt01\MaQiT_v1_02.prj" location="C:\Users\jlea\Documents\Terminus_change_tool\New_script\MaQiT_v1pt01" name="MaQiT_v1_02" target="target.ezdeploy.standalone" target-name="Application Compiler">
+    <param.appname>MaQiT</param.appname>
+    <param.icon />
+    <param.icons />
+    <param.version>1.02</param.version>
+    <param.authnamewatermark>James Lea</param.authnamewatermark>
+    <param.email>j.lea@liverpool.ac.uk</param.email>
+    <param.company>University of Liverpool</param.company>
+    <param.summary />
+    <param.description />
+    <param.screenshot />
+    <param.guid />
+    <param.installpath.string>\University of Liverpool\MaQiT\</param.installpath.string>
+    <param.installpath.combo>option.installpath.programfiles</param.installpath.combo>
+    <param.logo />
+    <param.install.notes />
+    <param.target.install.notes />
+    <param.intermediate>${PROJECT_ROOT}\MaQiT_v1_02\for_testing</param.intermediate>
+    <param.files.only>${PROJECT_ROOT}\MaQiT_v1_02\for_redistribution_files_only</param.files.only>
+    <param.output>${PROJECT_ROOT}\MaQiT_v1_02\for_redistribution</param.output>
+    <param.logdir>${PROJECT_ROOT}\MaQiT_v1_02</param.logdir>
+    <param.enable.clean.build>false</param.enable.clean.build>
+    <param.user.defined.mcr.options />
+    <param.target.type>subtarget.standalone</param.target.type>
+    <param.support.packages />
+    <param.web.mcr>true</param.web.mcr>
+    <param.package.mcr>false</param.package.mcr>
+    <param.no.mcr>false</param.no.mcr>
+    <param.web.mcr.name>MaQiT_v1_02</param.web.mcr.name>
+    <param.package.mcr.name>MyAppInstaller_mcr</param.package.mcr.name>
+    <param.no.mcr.name>MyAppInstaller_app</param.no.mcr.name>
+    <param.windows.command.prompt>true</param.windows.command.prompt>
+    <param.create.log>true</param.create.log>
+    <param.log.file>MaQiT_log</param.log.file>
+    <param.native.matlab>false</param.native.matlab>
+    <param.checkbox>false</param.checkbox>
+    <param.example />
+    <param.help.text />
+    <unset>
+      <param.icon />
+      <param.icons />
+      <param.summary />
+      <param.description />
+      <param.screenshot />
+      <param.guid />
+      <param.installpath.string />
+      <param.installpath.combo />
+      <param.logo />
+      <param.target.install.notes />
+      <param.intermediate />
+      <param.files.only />
+      <param.output />
+      <param.logdir />
+      <param.enable.clean.build />
+      <param.user.defined.mcr.options />
+      <param.target.type />
+      <param.support.packages />
+      <param.web.mcr />
+      <param.package.mcr />
+      <param.no.mcr />
+      <param.package.mcr.name />
+      <param.no.mcr.name />
+      <param.windows.command.prompt />
+      <param.native.matlab />
+      <param.checkbox />
+      <param.example />
+      <param.help.text />
+    </unset>
+    <fileset.main>
+      <file>${PROJECT_ROOT}\MaQiT_v1_02.m</file>
+    </fileset.main>
+    <fileset.resources />
+    <fileset.package />
+    <fileset.depfun>
+      <file>${PROJECT_ROOT}\arclength.m</file>
+      <file>${PROJECT_ROOT}\Call_Functions.m</file>
+      <file>${PROJECT_ROOT}\CentrelineMethod.m</file>
+      <file>${PROJECT_ROOT}\CurvilinearBox.m</file>
+      <file>${PROJECT_ROOT}\custom_colormap.m</file>
+      <file>${PROJECT_ROOT}\deg2utm.m</file>
+      <file>${PROJECT_ROOT}\distance2curve.m</file>
+      <file>${PROJECT_ROOT}\interparc.m</file>
+      <file>${PROJECT_ROOT}\Merge_and_Convert.m</file>
+      <file>${PROJECT_ROOT}\MultiCentrelineMethod.m</file>
+      <file>${PROJECT_ROOT}\plotTermini.m</file>
+      <file>${PROJECT_ROOT}\readGlacierData.m</file>
+      <file>${PROJECT_ROOT}\sn2xy.m</file>
+      <file>${PROJECT_ROOT}\VariableBox.m</file>
+      <file>${PROJECT_ROOT}\writeOutputData.m</file>
+      <file>${PROJECT_ROOT}\xy2sn.m</file>
+    </fileset.depfun>
+    <build-deliverables>
+      <file location="${PROJECT_ROOT}\MaQiT_v1_02\for_testing" name="MaQiT.exe" optional="false">C:\Users\jlea\Documents\Terminus_change_tool\New_script\MaQiT_v1pt01\MaQiT_v1_02\for_testing\MaQiT.exe</file>
+      <file location="${PROJECT_ROOT}\MaQiT_v1_02\for_testing" name="splash.png" optional="false">C:\Users\jlea\Documents\Terminus_change_tool\New_script\MaQiT_v1pt01\MaQiT_v1_02\for_testing\splash.png</file>
+      <file location="${PROJECT_ROOT}\MaQiT_v1_02\for_testing" name="readme.txt" optional="true">C:\Users\jlea\Documents\Terminus_change_tool\New_script\MaQiT_v1pt01\MaQiT_v1_02\for_testing\readme.txt</file>
+    </build-deliverables>
+    <workflow />
+    <matlab>
+      <root>C:\Program Files\MATLAB\R2017b</root>
+      <toolboxes>
+        <toolbox name="matlabcoder" />
+        <toolbox name="gpucoder" />
+        <toolbox name="polyspacebugfinder" />
+      </toolboxes>
+      <toolbox>
+        <matlabcoder>
+          <enabled>true</enabled>
+        </matlabcoder>
+      </toolbox>
+      <toolbox>
+        <gpucoder>
+          <enabled>true</enabled>
+        </gpucoder>
+      </toolbox>
+      <toolbox>
+        <polyspacebugfinder>
+          <enabled>true</enabled>
+        </polyspacebugfinder>
+      </toolbox>
+    </matlab>
+    <platform>
+      <unix>false</unix>
+      <mac>false</mac>
+      <windows>true</windows>
+      <win2k>false</win2k>
+      <winxp>false</winxp>
+      <vista>false</vista>
+      <linux>false</linux>
+      <solaris>false</solaris>
+      <osver>6.1</osver>
+      <os32>false</os32>
+      <os64>true</os64>
+      <arch>win64</arch>
+      <matlab>true</matlab>
+    </platform>
+  </configuration>
+</deployment-project>
