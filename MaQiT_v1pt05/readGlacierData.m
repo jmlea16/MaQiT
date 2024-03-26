@@ -50,9 +50,16 @@ function [centreline,termini,termini_date] = readGlacierData(centreline_director
                 m=m+1;
                 filenames(n,1).name
                 termini{m,1}=shaperead(strcat(terminus_directory,filenames(n,1).name));
-                termini_date(m,1)=str2num(filenames(n,1).name(1:4)); %year
-                termini_date(m,2)=str2num(filenames(n,1).name(6:7)); %month
-                termini_date(m,3)=str2num(filenames(n,1).name(9:10)); %day
+                if strcmp(filenames(n,1).name(5),'-')
+                    termini_date(m,1)=str2num(filenames(n,1).name(1:4)); %year
+                    termini_date(m,2)=str2num(filenames(n,1).name(6:7)); %month
+                    termini_date(m,3)=str2num(filenames(n,1).name(9:10)); %day
+                else
+                    termini_date(m,1)=str2num(filenames(n,1).name(1:4)); %year
+                    termini_date(m,2)=str2num(filenames(n,1).name(5:6)); %month
+                    termini_date(m,3)=str2num(filenames(n,1).name(7:8)); %day
+                end
+
                 termini_date(m,4)=datenum(termini_date(m,1),termini_date(m,2),termini_date(m,3)); %serial date
                 
                 %gets rid of NaNs (if they exist)
@@ -95,9 +102,9 @@ function [centreline,termini,termini_date] = readGlacierData(centreline_director
         %for n=1:length(termini_dummy(:,1))
             termini{n,1}=termini_dummy(n,1);
             if strcmp(termini_dummy(n,1).Date(5),'-')
-                termini_date(m,1)=str2num(filenames(n,1).name(1:4)); %year
-                termini_date(m,2)=str2num(filenames(n,1).name(6:7)); %month
-                termini_date(m,3)=str2num(filenames(n,1).name(9:10)); %day
+                termini_date(n,1)=str2num(termini_dummy(n,1).Date(1:4)); %year
+                termini_date(n,2)=str2num(termini_dummy(n,1).Date(6:7)); %month
+                termini_date(n,3)=str2num(termini_dummy(n,1).Date(9:10)); %day
             else
                 termini_date(n,1)=str2num(termini_dummy(n,1).Date(1:4)); %year
                 termini_date(n,2)=str2num(termini_dummy(n,1).Date(5:6)); %month
